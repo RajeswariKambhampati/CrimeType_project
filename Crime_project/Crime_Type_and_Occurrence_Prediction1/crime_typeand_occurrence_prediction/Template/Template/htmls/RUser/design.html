@@ -1,0 +1,181 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Crime AI Dashboard
+    </title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+    <div class="logo">
+        Crime AI
+    </div>
+
+    <div class="nav-links">
+
+        <a href="#">
+            Home
+        </a>
+
+        <a href="#">
+            Prediction
+        </a>
+
+        <a href="#">
+            Analytics
+        </a>
+
+        <a href="#">
+            Dashboard
+        </a>
+
+        <a href="#">
+            Login
+        </a>
+
+    </div>
+
+</div>
+
+<!-- HERO SECTION -->
+
+<div class="hero">
+
+    <h1>
+        Crime Type & Occurrence Prediction
+    </h1>
+
+    <p>
+        AI Powered Crime Analytics Dashboard using Machine Learning,
+        Data Science, and Predictive Analytics for identifying
+        crime patterns and occurrence trends.
+    </p>
+
+    <button class="btn">
+        Explore Dashboard
+    </button>
+
+</div>
+
+<!-- CARDS SECTION -->
+
+<section class="cards">
+
+    <div class="card">
+
+        <h2>
+            Crime Analytics
+        </h2>
+
+        <p>
+            Analyze district-wise crime patterns and identify
+            high-risk areas using interactive analytics.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>
+            AI Prediction
+        </h2>
+
+        <p>
+            Predict future crime occurrence using trained
+            Machine Learning models.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>
+            Crime Statistics
+        </h2>
+
+        <p>
+            Interactive dashboards with graphs, charts,
+            and crime category reports.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- PREDICTION FORM -->
+
+<div class="form-container">
+
+    <h2>
+        Predict Crime
+    </h2>
+
+    <form>
+
+        <input type="text" placeholder="Enter District">
+
+        <input type="text" placeholder="Enter Area">
+
+        <select>
+
+            <option>
+                Select Crime Type
+            </option>
+
+            <option>
+                Theft
+            </option>
+
+            <option>
+                Assault
+            </option>
+
+            <option>
+                Robbery
+            </option>
+
+            <option>
+                Cyber Crime
+            </option>
+
+        </select>
+
+        <input type="date">
+
+        <button class="btn">
+            Predict Crime
+        </button>
+
+    </form>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+    <p>
+        Crime AI Dashboard © 2026
+    </p>
+
+</div>
+
+</body>
+
+</html>

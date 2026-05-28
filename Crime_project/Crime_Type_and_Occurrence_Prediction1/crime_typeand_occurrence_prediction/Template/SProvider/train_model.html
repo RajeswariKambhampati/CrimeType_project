@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Train Model Results</title>
+</head>
+<body>
+    <h1>Training Results</h1>
+    {% if objs %}
+        <ul>
+            {% for obj in objs %}
+                <li>{{ obj.names }}: {{ obj.ratio }}%</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No training results found.</p>
+    {% endif %}
+</body>
+</html>

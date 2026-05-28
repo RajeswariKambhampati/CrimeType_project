@@ -1,0 +1,8 @@
+Django
+pandas
+numpy
+scikit-learn
+gunicorn
+whitenoise
+tensorflow
+xgboost

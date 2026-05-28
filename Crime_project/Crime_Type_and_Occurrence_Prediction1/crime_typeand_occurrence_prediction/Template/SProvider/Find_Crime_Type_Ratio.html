@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crime Type Ratio</title>
+</head>
+<body>
+    <h1>Crime Type Ratio</h1>
+    {% if objs %}
+        <ul>
+            {% for obj in objs %}
+                <li>{{ obj.names }}: {{ obj.ratio }}%</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No ratio data available.</p>
+    {% endif %}
+</body>
+</html>

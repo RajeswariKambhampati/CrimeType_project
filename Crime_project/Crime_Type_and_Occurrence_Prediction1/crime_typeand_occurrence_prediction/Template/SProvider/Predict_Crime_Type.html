@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict Crime Type</title>
+</head>
+<body>
+    <h1>Predict Crime Type</h1>
+    {% if list_objects %}
+        <ul>
+            {% for obj in list_objects %}
+                <li>{{ obj.INCIDENT_NUMBER }} - {{ obj.OFFENSE_DESCRIPTION }} - {{ obj.CTYPE }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No crime type data available.</p>
+    {% endif %}
+</body>
+</html>

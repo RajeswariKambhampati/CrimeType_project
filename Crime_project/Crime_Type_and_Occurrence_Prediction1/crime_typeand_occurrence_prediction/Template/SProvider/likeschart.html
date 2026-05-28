@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Like Chart</title>
+</head>
+<body>
+    <h1>Like Chart: {{ like_chart }}</h1>
+    {% if form %}
+        <ul>
+            {% for item in form %}
+                <li>{{ item.names }}: {{ item.dcount }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No like chart data.</p>
+    {% endif %}
+</body>
+</html>

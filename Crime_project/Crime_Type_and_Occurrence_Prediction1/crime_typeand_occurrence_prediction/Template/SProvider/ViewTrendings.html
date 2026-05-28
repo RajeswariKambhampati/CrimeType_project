@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Trendings</title>
+</head>
+<body>
+    <h1>Trending Crime Topics</h1>
+    {% if objects %}
+        <ul>
+            {% for obj in objects %}
+                <li>{{ obj.topics }}: {{ obj.dcount }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No trending data available.</p>
+    {% endif %}
+</body>
+</html>

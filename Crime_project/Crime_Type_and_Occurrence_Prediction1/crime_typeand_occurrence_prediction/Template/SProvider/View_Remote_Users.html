@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Remote Users</title>
+</head>
+<body>
+    <h1>Remote Users</h1>
+    {% if objects %}
+        <ul>
+            {% for obj in objects %}
+                <li>{{ obj.username }} - {{ obj.email }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No users found.</p>
+    {% endif %}
+</body>
+</html>

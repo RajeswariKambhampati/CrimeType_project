@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search DataSets</title>
+</head>
+<body>
+    <h1>Search DataSets</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        <label>Keyword: <input type="text" name="keyword"></label>
+        <button type="submit">Search</button>
+    </form>
+    {% if objs %}
+        <h2>Results</h2>
+        <ul>
+            {% for obj in objs %}
+                <li>{{ obj.INCIDENT_NUMBER }} - {{ obj.OFFENSE_DESCRIPTION }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <p><a href="{% url 'Add_DataSet_Details' %}">Upload Dataset</a></p>
+</body>
+</html>

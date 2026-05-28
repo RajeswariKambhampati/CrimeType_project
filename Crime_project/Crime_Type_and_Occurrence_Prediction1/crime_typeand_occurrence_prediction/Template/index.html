@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Investigation & Prediction System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        .navbar {
+            background-color: #0f1419;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            border-bottom: 3px solid #e94560;
+        }
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: #e94560;
+            font-size: 28px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .logo span {
+            color: #00d4ff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #e94560;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.4);
+        }
+        .header p {
+            font-size: 20px;
+            color: #00d4ff;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: #b0b0b0;
+            margin-top: 10px;
+        }
+        .login-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        .login-card {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            border-top: 4px solid #e94560;
+            transition: all 0.3s ease;
+        }
+        .login-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(233, 69, 96, 0.3);
+        }
+        .login-card.service-provider {
+            border-top-color: #00d4ff;
+        }
+        .login-card h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .login-card.service-provider h2 {
+            color: #00d4ff;
+        }
+        .login-card h2 {
+            color: #e94560;
+        }
+        .login-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 8px 0;
+            background-color: #e94560;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: 2px solid #e94560;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #d63649;
+            border-color: #d63649;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #e94560;
+            border: 2px solid #e94560;
+        }
+        .btn-secondary:hover {
+            background-color: #e94560;
+            color: white;
+        }
+        .service-provider .btn {
+            background-color: #00d4ff;
+            border-color: #00d4ff;
+            color: white;
+        }
+        .service-provider .btn:hover {
+            background-color: #00a8cc;
+            border-color: #00a8cc;
+        }
+        .service-provider .btn-secondary {
+            background-color: transparent;
+            color: #00d4ff;
+            border: 2px solid #00d4ff;
+        }
+        .service-provider .btn-secondary:hover {
+            background-color: #00d4ff;
+            color: white;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 80px;
+        }
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid #e94560;
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+        .feature h3 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .feature p {
+            color: #b0b0b0;
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .login-options {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <span>🔍</span> CRIME INVESTIGATION SYSTEM
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>CRIME TYPE & OCCURRENCE PREDICTION</h1>
+            <p>Advanced Crime Analytics & Investigation Platform</p>
+            <p class="subtitle">Leveraging AI & Machine Learning for Crime Analysis and Prevention</p>
+        </div>
+        
+        <div class="login-options">
+            <div class="login-card">
+                <h2>📊 Data Analyst</h2>
+                <p>Upload and analyze crime datasets. Track incidents, search case records, and manage your investigative data in a secure environment.</p>
+                <a href="{% url 'login' %}" class="btn">Analyst Login</a>
+                <br>
+                <a href="{% url 'Register1' %}" class="btn btn-secondary">Create Account</a>
+            </div>
+            
+            <div class="login-card service-provider">
+                <h2>🚔 Law Enforcement</h2>
+                <p>Access advanced analytics, predict crime patterns, train ML models, and download comprehensive reports for strategic enforcement planning.</p>
+                <a href="{% url 'serviceproviderlogin' %}" class="btn">Officer Access</a>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>📈 Crime Analytics</h3>
+                <p>Analyze crime trends, patterns, and statistics with our advanced data visualization tools and predictive models.</p>
+            </div>
+            <div class="feature">
+                <h3>🤖 ML Predictions</h3>
+                <p>Utilize machine learning algorithms to predict crime types, occurrence patterns, and hotspot identification.</p>
+            </div>
+            <div class="feature">
+                <h3>🔐 Secure Access</h3>
+                <p>Enterprise-grade security with role-based access control and encrypted data storage for sensitive case information.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charts 1</title>
+</head>
+<body>
+    <h1>Chart 1: {{ chart_type }}</h1>
+    {% if form %}
+        <ul>
+            {% for item in form %}
+                <li>{{ item.names }}: {{ item.dcount }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No chart data.</p>
+    {% endif %}
+</body>
+</html>
